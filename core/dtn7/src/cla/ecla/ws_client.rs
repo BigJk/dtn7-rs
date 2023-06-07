@@ -10,6 +10,7 @@ use std::str::FromStr;
 use tokio::sync::mpsc;
 use tokio_tungstenite::{connect_async, tungstenite::protocol::Message};
 
+#[derive(Clone)]
 pub enum Command {
     /// Requests a send of the given packet.
     SendPacket(Packet),
